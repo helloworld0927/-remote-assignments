@@ -45,7 +45,6 @@ button:focus {
 .logo,
 .navbar {
     padding: 0 40px;
-
 }
 
 .navbar ul {
@@ -90,7 +89,6 @@ button:focus {
     justify-content: center;
     flex-flow: row wrap;
 }
-
 
 .box {
     width: 40%;
