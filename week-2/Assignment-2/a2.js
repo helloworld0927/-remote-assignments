@@ -9,6 +9,7 @@ function calculate(args) {
     }
     return result;
 }
+
 console.log("Way1: 7+8")
 console.log(calculate({
     n1: 7,
