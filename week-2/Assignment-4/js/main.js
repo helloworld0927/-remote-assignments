@@ -10,7 +10,6 @@
 // }
 
 //Way 2
-var btn;
 let btn = {
     change: () => {
         bannerText.textContent = "Have FUN!"
