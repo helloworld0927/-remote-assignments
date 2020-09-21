@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
-  <title>week-2 A4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>week-2 Assignment-4</title>
 </head>
 
 <body>
-	<script src="a4.js"></script>
+    <header class="main_header">
+        <div class="logo">
+            <a href="#">Jacky's Week 2</a>
+        </div>
 
+        <nav class="navbar">
+            <ul>
+                <li><a href="">Item1</a></li>
+                <li><a href="">Item2</a></li>
+                <li><a href="">Item3</a></li>
+                <li><a href="">Item4</a></li>
+            </ul>
+        </nav>
 
-  <header class="header-bar">
-    <div class="logo">
-        <a href="#">Website Title / Logo</a>
-    </div>
+        <aside class="sidenav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </aside>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href=""> Item1</a></li>
-        <li><a href=""> Item2</a></li>
-        <li><a href=""> Item3</a></li>
-        <li><a href=""> Item4</a></li>
-      </ul>
-    </nav>
+        <nav class="sidenav_open">
+            <div class="closeBtn">
+                <span class="close"></span>
+                <span class="close"></span>
+            </div>
+            <ul>
+                <li><a href="">Item1</a></li>
+                <li><a href="">Item2</a></li>
+                <li><a href="">Item3</a></li>
+                <li><a href="">Item4</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<div class="mobile-nav">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div> 
-  </header>
-
-  <main>
     <div class="banner">
-      <h1>Welcome Message</h1>
+        <h1 class="banner_text">Click Me &excl;</h1>
     </div>
 
     <section class="main">
-    	<header class="section-title">
-    		<h2>Section Title</h2>
-    	</header>
+        <header class="main_subtitle">
+            <h2>Section Title</h2>
+        </header>
+        <div class="main_articles">
+            <article class="box">Content Box1</article>
+            <article class="box">Content Box2</article>
+            <article class="box">Content Box3</article>
+            <article class="box">Content Box4</article>
 
-	<div class="content">
-        <article class="box">Content Box1</article>
-		<article class="box">Content Box2</article>
-        <article class="box">Content Box3</article>
-        <article class="box">Content Box4</article>
-    </div>
-
-    <div class="content-button">
-		<div class="">Call to Action</div>
-    </div>
-    <div class="content" id="content2">
-        <article class="box">Content Box5</article>
-		<article class="box">Content Box6</article>
-        <article class="box">Content Box7</article>
-        <article class="box">Content Box8</article>
-	</div>
-
+        </div>
+        <div class="main_button">
+            <button>&#8897; More &#8897;</button>
+        </div>
     </section>
 
-  </main>
-  
+    <section class="main second hidden">
+        <div class="main_articles">
+            <article class="box">Content Box6</article>
+            <article class="box">Content Box7</article>
+            <article class="box">Content Box8</article>
+            <article class="box">Content Box9</article>
+        </div>
+    </section>
+
+    <footer class="main_footer">
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
-</html>
