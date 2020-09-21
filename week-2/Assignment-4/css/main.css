@@ -1,3 +1,7 @@
+body {
+    font-family: Arial;
+}
+
 a,
 a:hover,
 a:focus {
@@ -28,7 +32,7 @@ button:focus {
     outline: none;
 }
 
-
+/*class*/
 .main_header {
     width: 100%;
     height: 8vh;
@@ -76,7 +80,7 @@ button:focus {
     flex-flow: column nowrap;
 }
 
-.main_subtitle {
+.main_title {
     padding: 5px;
 }
 
@@ -142,13 +146,13 @@ button:focus {
 
 .sidenav_open {
     position: fixed;
-
     right: -100%;
     top: 0;
     background-color: #fff;
     transition: right .3s;
 }
 
+/*Close Button Layout*/
 .sidenav_open .closeBtn {
     width: 30px;
     height: 65px;
@@ -201,7 +205,7 @@ button:focus {
     }
 }
 
-/* >800px and <1200px */
+/* >801px and <1200px */
 @media screen and (min-width: 801px) and (max-width: 1200px) {
     .box {
         width: 40%;
@@ -217,7 +221,7 @@ button:focus {
     }
 }
 
-/* >500px and <800px */
+/* >501px and <800px */
 @media screen and (min-width: 501px) and (max-width: 800px) {
     .box {
         width: 40%;
