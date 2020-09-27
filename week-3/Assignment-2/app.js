@@ -7,18 +7,20 @@ app.get('/', (req, res) => {
 })
 
 app.get("/getData", (req, res) => {
-    var nm = Number(req.query.number, 10);
-    var result = 0;
-
+    let nm = Number(req.query.number, 10);
     if (req.query.number === undefined || req.query.number === "") {
-        res.send("Lack of Parameter");
+        res.json({
+            sum: "Lack of Parameter"
+        });
     } else {
         if (isNaN(nm) || nm % 1 != 0) {
-            res.send("Wrong Parameter");
+            res.json({
+                sum: "Wrong Parameter"
+            });
         } else {
-            for (var i = 1; i <= nm; i++)
-                result += i;
-            res.send(String(result));
+            res.json({
+                sum: `${((nm + 1) * nm) / 2}`
+            });
         }
     }
 });
