@@ -1,17 +1,27 @@
 body {
   margin: 0;
   padding: 0;
-
-  /* make it look decent enough */
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
   box-sizing: border-box;
+  font-family: Arial;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a {
+  color: #FFE069;
 }
 
 nav {
   width: 100%;
-  background-color: tomato;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #8A3EC4;
 }
 
 .container {
@@ -19,15 +29,14 @@ nav {
   margin: 0 auto;
 }
 
-.navItem li {
+.navbar li {
   padding: 0;
   list-style: none;
   margin-left: 15px;
-  font-size: 25px;
-  transition: transform 0.4s;
+  font-size: 20px;
 }
 
-.navItem {
+.navbar {
   display: flex;
   display: none;
 }
@@ -37,18 +46,10 @@ nav {
   justify-content: space-between;
 }
 
-a {
-  text-decoration: none;
-}
-
-.navItem li:hover {
-  transform: rotate(20deg);
-}
 
 main {
   margin-top: 0px;
   height: 200px;
-  background-color: firebrick;
 }
 
 .menu {
@@ -68,6 +69,8 @@ main {
   margin-top: 0px;
   text-align: center;
   line-height: 200px;
+  background-color: #FFE069;
+
 }
 
 .secondtitle {
@@ -77,13 +80,17 @@ main {
 }
 
 article {
-  background-color: chocolate;
-  border-radius: 5px;
+  width: 40%;
+  height: 140px;
+  text-align: center;
+  background-color: #429F95;
+  margin: 0 8px 16px 8px;
+  padding: 16px;
+  font-size: 12px;
+
 }
 
 .button {
-  border: 2px solid peru;
-  border-radius: 15px;
   width: 200px;
   height: 50px;
   text-align: center;
@@ -91,9 +98,8 @@ article {
   margin: 0 auto;
   margin-bottom: 20px;
   color: black;
-  background-color: peru;
-  font-size: 25px;
-  transition: background-color 0.4s;
+  background-color: #c2d5ea;
+  font-size: 16px;
 }
 
 .button:hover {
@@ -107,20 +113,17 @@ article {
   right: 0;
   width: 200px;
   height: 700px;
-  background-color: #004777;
+  background-color: gray;
   padding-top: 40px;
   padding-left: 30px;
   opacity: 0.8;
+  font-size: 2em;
+
 }
 
 #side li {
   list-style: none;
   opacity: 1;
-  font-size: 50px;
-}
-
-#side li a {
-  color: wheat;
 }
 
 .hide {
@@ -134,6 +137,46 @@ article {
 #addContent {
   display: none;
 }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 95%;
+  }
+
+  .article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  article {
+    width: 45%;
+    padding: 5px 5px;
+    margin-bottom: 20px;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .navbar li {
+    padding: 0;
+    list-style: none;
+    margin-left: 15px;
+    font-size: 20px;
+  }
+}
+
 
 @media (min-width: 500px) and (max-width: 800px) {
   .container {
@@ -174,38 +217,18 @@ article {
     display: none;
   }
 
-  .navItem {
+  .navbar {
     display: flex;
   }
 
-  .navItem li {
+  .navbar li {
     padding: 0;
     list-style: none;
     margin-left: 15px;
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1200px;
+    font-size: 20px;
   }
 }
 
 .clickToShow {
   display: none;
-}
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-  opacity: 0;
-}
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
 }

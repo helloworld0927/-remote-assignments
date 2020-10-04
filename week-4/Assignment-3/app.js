@@ -12,18 +12,18 @@ const Nav = (props) => {
           <div className="menu bar2" />
           <div className="menu bar3" />
         </div>
-        <ul className="navItem">
+        <ul className="navbar">
           <li>
-            <a href="#">map</a>
+            <a href="#">Item1</a>
           </li>
           <li>
-            <a href="#">news</a>
+            <a href="#">Item2</a>
           </li>
           <li>
-            <a href="#">career</a>
+            <a href="#">Item3</a>
           </li>
           <li>
-            <a href="#">conatct</a>
+            <a href="#">Item4</a>
           </li>
         </ul>
       </div>
@@ -35,16 +35,16 @@ const Sidenav = (props) => {
   return (
     <div id="side" className={props.showHideSide()}>
       <li onClick={props.clickSide}>
-        <a href="#">map</a>
+        <a href="#">Item1</a>
       </li>
       <li onClick={props.clickSide}>
-        <a href="#">news</a>
+        <a href="#">Item2</a>
       </li>
       <li onClick={props.clickSide}>
-        <a href="#">career</a>
+        <a href="#">Item3</a>
       </li>
       <li onClick={props.clickSide}>
-        <a href="#">conatct</a>
+        <a href="#">Item4</a>
       </li>
     </div>
   );
@@ -68,7 +68,7 @@ const Button = (props) => {
         props.action();
       }}
     >
-      {props.more ? "Click2Show" : "Click2Hide"}
+      {props.more ? "Click to more" : "Hide"}
     </div>
   );
 };
@@ -86,52 +86,44 @@ class App extends React.Component {
   state = {
     article: [
       {
-        title: "Content Box 1",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box1",
         id: 1,
         isShow: true,
       },
       {
-        title: "Content Box 2",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box2",
         id: 2,
         isShow: true,
       },
       {
-        title: "Content Box 3",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box3",
         id: 3,
         isShow: true,
       },
       {
-        title: "Content Box 4",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box4",
         id: 4,
         isShow: true,
       },
     ],
     article2: [
       {
-        title: "Content Box 5",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box5",
         id: 5,
         isShow: false,
       },
       {
-        title: "Content Box 6",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box6",
         id: 6,
         isShow: false,
       },
       {
-        title: "Content Box 7",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box7",
         id: 7,
         isShow: false,
       },
       {
-        title: "Content Box 8",
-        content: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate`,
+        title: "Content Box8",
         id: 8,
         isShow: false,
       },
@@ -172,7 +164,7 @@ class App extends React.Component {
   };
 
   mainTitle = () => {
-    return this.state.mainTitle ? "Hello yuping !" : "YOU JUST CLICKED!!!";
+    return this.state.mainTitle ? "Click Me!" : "Have FUN!";
   };
 
   handleTitleClick = () => {
@@ -185,7 +177,7 @@ class App extends React.Component {
     return (
       <div>
         <Nav
-          logoTitle="JIM63"
+          logoTitle="Week 4 A3"
           open={this.state.menuOpen}
           handleMenuClick={this.handleMenuClick}
           showHideMenu={this.showHideMenu}
